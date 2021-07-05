@@ -1,0 +1,2 @@
+# wgrm
+ WireGuard Remote Management
