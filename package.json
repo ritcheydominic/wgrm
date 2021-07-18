@@ -13,7 +13,7 @@
     "url": "git+https://github.com/ritcheydominic/wgrm.git"
   },
   "author": "ritcheydominic",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ritcheydominic/wgrm/issues"
   },
