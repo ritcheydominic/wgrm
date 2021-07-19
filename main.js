@@ -8,6 +8,7 @@ const app = express();
 // Initialize EJS
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
+app.set('view options', { layout: false });
 app.use(express.static('static'))
 
 // Check database and add index routes based on database connection status
@@ -20,7 +21,7 @@ mongoose.connect(mongoDbConfig.shortUrl, {useNewUrlParser: true})
     app.use('/', require('./routes/database-error'));
 });
 
-// Add routes
+// Add other routes
 app.use('/users', require('./routes/users'));
 
 const PORT = process.env.PORT || 8080;

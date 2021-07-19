@@ -13,7 +13,7 @@ body {
 
 .form-login {
   width: 100%;
-  max-width: 330px;
+  max-width: 450px;
   padding: 15px;
   margin: auto;
 }
@@ -36,4 +36,11 @@ body {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+.page-database-error {
+  width: 100%;
+  max-width: 450px;
+  padding: 15px;
+  margin: auto;
 }
