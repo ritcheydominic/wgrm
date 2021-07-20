@@ -14,16 +14,12 @@ const userSchema = mongoose.Schema({
         required: true
     },
     groups: {
-        type: [Number],
+        type: [mongoose.Schema.Types.ObjectId],
         default: []
     },
     active: {
         type: Boolean,
         default: true
-    },
-    superAdmin: {
-        type: Boolean,
-        default: false
     }
 });
 
