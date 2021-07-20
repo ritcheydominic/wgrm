@@ -7,7 +7,8 @@ const userSchema = mongoose.Schema({
     },
     email: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     password: {
         type: String,
@@ -16,6 +17,11 @@ const userSchema = mongoose.Schema({
     groups: {
         type: [mongoose.Schema.Types.ObjectId],
         default: []
+    },
+    permissions: {
+        type: Map,
+        of: Boolean,
+        default: {}
     },
     active: {
         type: Boolean,
