@@ -7,10 +7,9 @@ const groupSchema = mongoose.Schema({
         unique: true
     },
     permissions: {
-        type: Map,
-        of: Boolean,
-        default: {}
-    },
+        type: [String],
+        default: []
+    }
 });
 
 const Group = mongoose.model('Group', groupSchema);
