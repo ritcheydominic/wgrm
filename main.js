@@ -23,7 +23,7 @@ mongoose.connect(mongoDbConfig.shortUrl, {useNewUrlParser: true})
     app.use('/', require('./routes/database-error'));
 });
 
-// Add other routes
+// Add routes
 app.use('/', require('./routes/index'));
 app.use('/setup', require('./routes/setup'));
 app.use('/users', require('./routes/users'));

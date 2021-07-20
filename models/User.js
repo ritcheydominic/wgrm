@@ -20,6 +20,10 @@ const userSchema = mongoose.Schema({
     active: {
         type: Boolean,
         default: true
+    },
+    superAdmin: {
+        type: Boolean,
+        default: false
     }
 });
 
