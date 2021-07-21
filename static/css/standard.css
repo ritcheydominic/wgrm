@@ -38,13 +38,6 @@ body {
   border-top-right-radius: 0;
 }
 
-.page-database-error {
-  width: 100%;
-  max-width: 450px;
-  padding: 15px;
-  margin: auto;
-}
-
 .form-signup {
   width: 100%;
   max-width: 450px;
@@ -54,4 +47,11 @@ body {
 
 .form-signup .form-floating:focus-within {
   z-index: 2;
+}
+
+.page-common {
+  width: 100%;
+  max-width: 450px;
+  padding: 15px;
+  margin: auto;
 }

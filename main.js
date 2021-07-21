@@ -1,7 +1,7 @@
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const mongoDbConfig = require('./config').mongodb;
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
 const app = express();
 
@@ -17,16 +17,13 @@ app.use(express.urlencoded({ extended: false }));
 // Check database connectivity
 mongoose.connect(mongoDbConfig.shortUrl, {useNewUrlParser: true})
 .then(() => {
-    console.log('[Database/MongoDB] Connection successful');
+    app.use('/', require('./routes/index'));
+    app.use('/setup', require('./routes/setup'));
+    app.use('/users', require('./routes/users'));
 }).catch(err => {
-    console.error('[Database/MongoDB] Connection error:\n' + err)
+    console.error('[DB] Connection error:\n' + err);
     app.use('/', require('./routes/database-error'));
 });
-
-// Add routes
-app.use('/', require('./routes/index'));
-app.use('/setup', require('./routes/setup'));
-app.use('/users', require('./routes/users'));
 
 const PORT = process.env.PORT || 8080;
 
