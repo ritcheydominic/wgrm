@@ -80,6 +80,7 @@ router.post('/create-first-user', (req, res) => {
                                                         newUser.password = hash;
                                                         newUser.save() // Save first user to database with hashed password
                                                             .then(user => {
+                                                                req.flash('success_msg', 'User created successfully.');
                                                                 res.redirect('/users/log-in');
                                                             })
                                                             .catch(err => {

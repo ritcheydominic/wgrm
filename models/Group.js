@@ -9,7 +9,12 @@ const groupSchema = mongoose.Schema({
     permissions: {
         type: [String],
         default: []
-    }
+    },
+    version: {
+        type: Number,
+        default: 1
+    },
+    versionKey: false
 });
 
 const Group = mongoose.model('Group', groupSchema);

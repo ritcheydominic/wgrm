@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const userSchema = mongoose.Schema({
     name: {
         type: String,
-        required: true
+        required: true,
+        index: true
     },
     email: {
         type: String,
@@ -25,7 +26,12 @@ const userSchema = mongoose.Schema({
     active: {
         type: Boolean,
         default: true
-    }
+    },
+    version: {
+        type: Number,
+        default: 1
+    },
+    versionKey: false
 });
 
 const User = mongoose.model('User', userSchema);
